@@ -1,0 +1,36 @@
+{
+  "name": "Transaction",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "task",
+      "otherEntityRelationshipName": "transaction",
+      "relationshipName": "relatedTask",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210305194841",
+  "entityTableName": "transaction",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
